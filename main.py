@@ -10,12 +10,12 @@ class HangmanGame:
     def select_word(self):
         language = input("Choose a language between French and English. (fr/en)\n")
         if language.lower() == "fr" or language.lower() == "french":
-            with open("words-fr.txt") as dictionary:
+            with open("./languages/words-fr.txt") as dictionary:
                 words = dictionary.readlines()
                 word = random.choice(words).strip()
                 return word
         elif language.lower() == "en" or language.lower() == "english":
-            with open("words-en.txt") as dictionary:
+            with open("./languages/words-en.txt") as dictionary:
                 words = dictionary.readlines()
                 word = random.choice(words).strip()
                 return word
